@@ -9,13 +9,13 @@ terraform {
 }
 
 provider "azurerm" {
-    version = 1.38
-    }
+  version = 1.38
+}
 
 resource "azurerm_app_service_plan" "svcplan" {
-  name                = "Enter App Service Plan name"
+  name                = "Test-asp"
   location            = "eastus"
-  resource_group_name = "Enter Resource Group Name"
+  resource_group_name = "1-758661aa-playground-sandbox"
 
   sku {
     tier = "Standard"
@@ -24,9 +24,9 @@ resource "azurerm_app_service_plan" "svcplan" {
 }
 
 resource "azurerm_app_service" "appsvc" {
-  name                = "Enter Web App Service Name"
+  name                = "Test_Webapp"
   location            = "eastus"
-  resource_group_name = "Enter Resource Group Name"
+  resource_group_name = "1-758661aa-playground-sandbox"
   app_service_plan_id = azurerm_app_service_plan.svcplan.id
 
 
