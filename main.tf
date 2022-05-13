@@ -11,7 +11,7 @@ terraform {
 resource "azurerm_app_service_plan" "svcplan" {
   name                = "Test-asp"
   location            = "eastus"
-  resource_group_name = "1-758661aa-playground-sandbox"
+  resource_group_name = "Terraform"
 
   sku {
     tier = "Standard"
@@ -22,7 +22,7 @@ resource "azurerm_app_service_plan" "svcplan" {
 resource "azurerm_app_service" "appsvc" {
   name                = "Test-Webapp"
   location            = "eastus"
-  resource_group_name = "1-758661aa-playground-sandbox"
+  resource_group_name = "Terraform"
   app_service_plan_id = azurerm_app_service_plan.svcplan.id
 
 
