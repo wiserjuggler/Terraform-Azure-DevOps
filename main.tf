@@ -8,9 +8,6 @@ terraform {
   }
 }
 
-provider "azurerm" {
-}
-
 resource "azurerm_app_service_plan" "svcplan" {
   name                = "Test-asp"
   location            = "eastus"
