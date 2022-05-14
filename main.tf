@@ -1,13 +1,3 @@
-terraform {
-  cloud {
-    organization = "vaultec"
-
-    workspaces {
-      name = "Default"
-    }
-  }
-}
-
 resource "azurerm_app_service_plan" "svcplan" {
   name                = "Test-asp"
   location            = var.resource_location
