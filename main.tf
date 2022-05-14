@@ -10,7 +10,7 @@ resource "azurerm_app_service_plan" "svcplan" {
 }
 
 resource "azurerm_app_service" "appsvc" {
-  name                = "Test-Webapp"
+  name                = "Test-Webapp-jihxjhejhecjhcej"
   location            = var.resource_location
   resource_group_name = var.resource_group_name
   app_service_plan_id = azurerm_app_service_plan.svcplan.id
